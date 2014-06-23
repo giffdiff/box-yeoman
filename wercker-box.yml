@@ -5,7 +5,7 @@ type: main
 platform: ubuntu@12.04
 description: "node.js, compass, yeoman, grunt, bower, phantomjs, karma"
 packages:
-  - nodejs@0.10.26
+  - nodejs@0.10.29
   - phantomjs@1.9.2
   - compass@3.2.14
 keywords:
