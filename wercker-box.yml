@@ -1,11 +1,11 @@
 name: box-yeoman
-version: 0.5.2
-inherits: wercker/ubuntu12.04-nodejs0.10@1.0.6
+version: 0.5.4
+inherits: wercker/ubuntu12.04-nodejs0.10@1.2.0
 type: main
 platform: ubuntu@12.04
 description: "node.js, compass, yeoman, grunt, bower, phantomjs, karma"
 packages:
-  - nodejs@0.10.26
+  - nodejs@0.10.29
   - phantomjs@1.9.7
   - compass@3.2.14
 keywords:
@@ -17,6 +17,8 @@ keywords:
   - phantomjs
   - karma
 script: |
+  # remove the default installed optipng as it is too old
+  sudo apt-get remove optipng 
   sudo apt-get update
 
   # compass
