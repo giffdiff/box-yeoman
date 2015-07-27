@@ -1,6 +1,6 @@
 name: box-yeoman
-version: 0.5.5
-inherits: wercker/ubuntu12.04-nodejs0.10@1.2.0
+version: 0.6.0
+inherits: wercker/ubuntu12.04-nodejs0.10@1.6.1
 type: main
 platform: ubuntu@12.04
 description: "node.js, compass, yeoman, grunt, bower, phantomjs, karma"
@@ -26,7 +26,9 @@ script: |
 
   # node.js
   sudo npm cache clean -f
-  sudo npm install -g n
+  #sudo npm install -g n
+  sudo curl https://www.npmjs.com/install.sh | sh
+  sudo npm update -g
   sudo n stable
   node -v
 
