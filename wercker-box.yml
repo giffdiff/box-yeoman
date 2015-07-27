@@ -26,8 +26,8 @@ script: |
 
   # node.js
   sudo npm cache clean -f
-  #sudo npm install -g n
-  sudo curl https://www.npmjs.com/install.sh | sh
+  sudo npm install -g n
+  #sudo curl https://www.npmjs.com/install.sh | sh
   sudo npm update -g
   sudo n stable
   node -v
