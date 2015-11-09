@@ -1,8 +1,8 @@
 name: box-yeoman
 version: 0.6.2
-inherits: wercker/ubuntu12.04-nodejs0.10@1.6.1
+inherits: nahody/ubuntu14.04-nodejs@4.1.3
 type: main
-platform: ubuntu@12.04
+platform: ubuntu@14.04
 description: "node.js, compass, yeoman, grunt, bower, phantomjs, karma"
 packages:
   - nodejs@0.12.7
@@ -18,7 +18,7 @@ keywords:
   - karma
 script: |
   # remove the default installed optipng as it is too old
-  sudo apt-get remove optipng 
+  sudo apt-get remove optipng
   sudo apt-get update
 
   # compass
@@ -31,7 +31,7 @@ script: |
   sudo n stable
   node -v
 
-  # bower global, so you dont need to change the package.json 
+  # bower global, so you dont need to change the package.json
   sudo npm install -g bower
 
   # phantomjs
@@ -43,4 +43,3 @@ script: |
   # yeoman
   sudo apt-get install -y libqt4-dev qt4-qmake
   sudo npm install -g yo
-
